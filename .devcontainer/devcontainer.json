@@ -1,0 +1,77 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+
+// FYI: https://github.com/microsoft/datascience-py-r/blob/main/src/datascience-py-r/.devcontainer/devcontainer.json
+
+
+{
+	"name": "Python 3",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "devcontainer",
+
+	"workspaceFolder": "/workspace",
+
+	"customizations": {
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"[python]": {
+					"defaultInterpreterPath": "/usr/local/bin/python",
+					"editor.defaultFormatter": "ms-python.black-formatter",
+					"editor.formatOnType": true,
+					"editor.formatOnSave": true
+				},
+				"[jupyter]": {
+					"themeMatplotlibPlots": true,
+					"widgetScriptSources": [
+						"unpkg.com",
+						"jsdelivr.com"
+					]
+				},
+				"[r]": {
+					"rterm.linux": "/usr/local/bin/radian",
+					"r.bracketedPaste": true
+				},
+				"files.associations": {
+					"*.sql": "jinja-sql"
+				}
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-python.python",
+				"ms-azuretools.vscode-docker",
+				"ms-toolsai.jupyter",
+				"ms-python.black-formatter",
+				"redhat.vscode-yaml",
+				"ms-python.isort",
+				"reditorsupport.r",
+				"GitHub.vscode-pull-request-github",
+				"eamodio.gitlens",
+				"innoverio.vscode-dbt-power-user",
+				"mechatroner.rainbow-csv"
+			]
+		}
+	},
+
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	
+	
+	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "root"
+	// "remoteUser": "vscode"
+}

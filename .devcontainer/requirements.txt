@@ -1,0 +1,15 @@
+pandas
+numpy
+matplotlib
+plotly
+Faker
+ipykernel
+ipywidgets
+jupyter
+duckdb
+requests
+dagster
+dagster-webserver
+dagster_duckdb
+dagster_duckdb_pandas
+dagster_dbt
